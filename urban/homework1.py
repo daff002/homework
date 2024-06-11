@@ -1,5 +1,5 @@
 # 1
-example = 'Топинамбурsasas'
+example = 'Топинамбур'
 
 # 2
 print(example[0])
