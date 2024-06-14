@@ -1,5 +1,5 @@
 immutable_var = 1, 2, "a", "b", [100, 200]
-print(immutable_var)
+print('Immutable tuple: ', immutable_var)
 
 # immutable_var[0] = 5
 # print(immutable_var)
@@ -11,8 +11,8 @@ print(immutable_var)
 
 mutable_var = 1, 2, 'a', 'b', ['one', 'two']  # в данном примере в кортеже содержится список, который можно изменять
 mutable_var[4][0] = 'three'
-print(mutable_var)
+print('Nested list in tuple: ', mutable_var)
 
 mutable_list = [1, 2, 'a', 'b', 'Unmodified']
 mutable_list[4] = 'Modified'
-print(mutable_list)
+print('Mutable list: ', mutable_list)
