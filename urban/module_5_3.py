@@ -60,8 +60,8 @@ class House:
 
     def __add__(self, value):
         if isinstance(value, int):
-            new_floors = self.number_of_floors + value
-            return House(self.name, new_floors)
+            self.number_of_floors += value
+            return self
         return NotImplemented
 
     def __radd__(self, value):
