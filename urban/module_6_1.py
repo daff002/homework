@@ -1,34 +1,30 @@
 class Animal:
     def __init__(self, name):
+        self.name = name
         self.alive = True
         self.fed = False
-        self.name = name
+
+    def eat(self, food):
+        if food.edible:
+            self.fed = True
+            print(f"{self.name} съел {food.name}")
+        else:
+            self.alive = False
+            print(f"{self.name} не стал есть {food.name}")
 
 
 class Plant:
     def __init__(self, name):
-        self.edible = False
         self.name = name
+        self.edible = False
 
 
 class Mammal(Animal):
-    def eat(self, food):
-        if food.edible:
-            print(f"{self.name} съел {food.name}")
-            self.fed = True
-        else:
-            print(f"{self.name} не стал есть {food.name}")
-            self.alive = False
+    pass
 
 
 class Predator(Animal):
-    def eat(self, food):
-        if food.edible:
-            print(f"{self.name} съел {food.name}")
-            self.fed = True
-        else:
-            print(f"{self.name} не стал есть {food.name}")
-            self.alive = False
+    pass
 
 
 class Flower(Plant):
@@ -41,6 +37,7 @@ class Fruit(Plant):
         self.edible = True
 
 
+# Создаем объекты классов и демонстрируем их работу
 a1 = Predator('Волк с Уолл-Стрит')
 a2 = Mammal('Хатико')
 p1 = Flower('Цветик семицветик')
